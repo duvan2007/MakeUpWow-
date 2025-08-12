@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MakeUp Wow! - Mi cuenta</title>
+  <style>
+    /* Estilo encabezado */
+    .header {
+      background-color: #ff69b4;
+      color: rgb(0, 0, 0);
+      padding: 30px 20px 20px 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+
+    .search-bar {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      font-size: 1em;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .search-bar button:hover {
+      background-color: #ffffff;
+      color: #ff69b4;
+    }
+
+    ul.menu {
+      list-style-type: none;
+      padding: 10px 0 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    ul.menu li a {
+      padding: 10px 18px;
+      text-decoration: none;
+      background-color: #f0f0f0;
+      color: #000;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      transition: border 0.3s;
+      font-weight: bold;
+    }
+
+    ul.menu a:hover,
+    ul.menu a:focus {
+      border: 2px solid rgb(255, 72, 215);
+      outline: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding-top: 280px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 25px;
+    }
+
+    .tab-button {
+      background: transparent;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #555;
+      margin: 0 8px;
+      border-bottom: 3px solid transparent;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .tab-button:hover {
+      color: #d63384;
+    }
+
+    .tab-button.active {
+      color: #d63384;
+      border-bottom-color: #d63384;
+    }
+
+    form {
+      display: none;
+      flex-direction: column;
+    }
+
+    form.active {
+      display: flex;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input, select {
+      padding: 10px 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      outline-color: #d63384;
+    }
+
+    .checkboxes label {
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    .checkboxes input {
+      margin-right: 5px;
+    }
+
+    button.submit-btn {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button.submit-btn:hover {
+      background-color: #b22c6f;
+    }
+
+    .dob-group {
+      display: flex;
+      gap: 5px;
+    }
+
+    .dob-group select {
+      flex: 1;
+    }
+    .logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  </style>
+</head>
+<body>
+
+   <div class="header">
+  <div class="logo-titulo">
+    <img src="assets/img/logo.jpg" alt="Logo MakeUp Wow!" class="logo">
+    <div>
+      <h1>MakeUp Wow!</h1>
+      <p>Descubre la mejor versión de ti</p>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar productos...">
+    <button>Buscar</button>
+  </div>
+    <ul class="menu">
+      <li><a href="http://127.0.0.1:5500/index.html">Inicio</a></li>
+      <li><a href="http://127.0.0.1:5500/mi%20cuenta.html">Mi cuenta</a></li>
+      <li><a href="http://127.0.0.1:5500/catalogo.html">Catálogo</a></li>
+      <li><a href="#ofertas">Nosotros</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h3>Mi cuenta</h3>
+    <div class="tabs">
+      <button class="tab-button active" id="login-tab">Iniciar Sesión</button>
+      <button class="tab-button" id="register-tab">Registrarse</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="active">
+      <label for="login-email">Correo electrónico:</label>
+      <input type="email" id="login-email" placeholder="Correo electrónico" required />
+
+      <label for="login-password">Contraseña:</label>
+      <input type="password" id="login-password" placeholder="Contraseña" required />
+
+      <button type="submit" class="submit-btn">Iniciar Sesión</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Nombre" required>
+
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" placeholder="Apellidos" required>
+
+      <label for="register-email">Correo electrónico:</label>
+      <input type="email" id="register-email" placeholder="Correo electrónico" required>
+
+      <label>Fecha de nacimiento:</label>
+      <div class="dob-group">
+        <select name="dia" required>
+          <option value="">Día</option>
+          <script>
+            for (let i = 1; i <= 31; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+        <select name="mes" required>
+          <option value="">Mes</option>
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+        <select name="anio" required>
+          <option value="">Año</option>A<
+          <script>
+            const y = new Date().getFullYear();
+            for (let i = y; i >= 1900; i--) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+      </div>
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" placeholder="Ciudad" required>
+
+      <label for="cp">Telefono:</label>
+      <input type="text" id="cp" placeholder="Telefono" required>
+
+      <label for="pais">País:</label>
+      <select id="pais" required>
+        <option value="">Selecciona un país</option>
+        <option value="mx">México</option>
+        <option value="es">España</option>
+        <option value="ar">Argentina</option>
+        <option value="co">Colombia</option>
+      </select>
+
+      <label for="usuario">Nombre de usuario:</label>
+      <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+
+      <label for="register-password">Contraseña:</label>
+      <input type="password" id="register-password" placeholder="Contraseña" required>
+
+      <label for="register-password2">Confirmar contraseña:</label>
+      <input type="password" id="register-password2" placeholder="Confirmar contraseña" required>
+
+      <div class="checkboxes">
+        <label><input type="checkbox"> Deseo recibir ofertas de iDESWEB</label><br>
+        <label>Frecuencia:
+          <input type="radio" name="frecuencia"> Diario
+          <input type="radio" name="frecuencia"> Semanal
+          <input type="radio" name="frecuencia"> Mensual
+        </label><br>
+        <label><input type="checkbox" required> Acepto términos y condiciones</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Crear cuenta</button>
+    </form>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById('login-tab');
+    const registerTab = document.getElementById('register-tab');
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+      loginForm.classList.add('active');
+      registerForm.classList.remove('active');
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+      registerForm.classList.add('active');
+      loginForm.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

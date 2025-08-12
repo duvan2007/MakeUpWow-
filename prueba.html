@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros - MakeUp Wow!</title>
+  <style>
+    /* El mismo CSS que ya tienes para el encabezado */
+    .header {
+      background-color: #ff69b4;
+      color: rgb(0, 0, 0);
+      padding: 30px 20px 20px 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+
+    .search-bar {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      font-size: 1em;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .search-bar button:hover {
+      background-color: #ffffff;
+      color: #ff69b4;
+    }
+
+    ul.menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    ul.menu li a {
+      display: inline-block;
+      padding: 10px 18px;
+      text-decoration: none;
+      background-color: #f0f0f0;
+      color: #000;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      transition: border 0.3s;
+      font-weight: bold;
+    }
+
+    ul.menu a:hover,
+    ul.menu a:focus {
+      border: 2px solid rgb(255, 72, 215);
+      outline: none;
+    }
+
+    .logo-titulo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: girar 4s linear infinite;
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Espacio para el header fijo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      padding-top: 250px;
+      color: #333;
+    }
+
+    /* Sección Nosotros */
+    .nosotros {
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+
+    .nosotros h2 {
+      text-align: center;
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con buscador y menú -->
+  <div class="header">
+    <div class="logo-titulo">
+      <img src="assets/img/logo.jpg" alt="Logo MakeUp Wow!" class="logo">
+      <div>
+        <h1>MakeUp Wow!</h1>
+        <p>Descubre la mejor versión de ti</p>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos...">
+      <button>Buscar</button>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="mi cuenta.html">Mi cuenta</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul>
+  </div>
+
+  <!-- Sección Nosotros -->
+  <section class="nosotros" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>MakeUp Wow!</strong> nos apasiona el mundo de la belleza y el cuidado personal. Nuestra misión es ayudarte a descubrir y potenciar la mejor versión de ti misma con productos de alta calidad, accesibles y pensados para todo tipo de piel y estilo.</p>
+    <p>Desde el inicio, hemos trabajado para ofrecer un catálogo cuidadosamente seleccionado, donde encontrarás desde maquillaje, hasta productos para el cuidado facial y corporal, siempre con las últimas tendencias y recomendaciones de expertos.</p>
+    <p>Creemos en la confianza, la diversidad y la autoexpresión, por eso nuestro equipo está comprometido en brindarte una experiencia de compra fácil, segura y personalizada.</p>
+    <p>¡Gracias por ser parte de nuestra comunidad y permitirnos acompañarte en tu camino hacia la belleza y el bienestar!</p>
+  </section>
+
+</body>
+</html>

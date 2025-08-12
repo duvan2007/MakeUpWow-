@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="assets/img/logo.jpg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakeUp Wow! - Categorías</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding-top: 250px;
+    }
+
+    /* Encabezado */
+    .header {
+      background-color: #ff69b4;
+      color: rgb(0, 0, 0);
+      padding: 30px 20px 20px 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+
+    .search-bar {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      font-size: 1em;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .search-bar button:hover {
+      background-color: #ffffff;
+      color: #ff00aa;
+    }
+
+    /* Menú de navegación */
+    ul.menu {
+      list-style-type: none;
+      padding: 10px 0 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    ul.menu li a {
+      padding: 10px 18px;
+      text-decoration: none;
+      background-color: #f0f0f0;
+      color: #000;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      transition: border 0.3s;
+      font-weight: bold;
+    }
+
+    ul.menu a:hover,
+    ul.menu a:focus {
+      border: 2px solid rgb(255, 72, 215);
+      outline: none;
+    }
+
+    /* Categorías gráficas */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 40px;
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .categoria {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      transition: transform 0.3s;
+    }
+
+    .categoria:hover {
+      transform: scale(1.05);
+    }
+
+    .categoria img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgb(255, 255, 255);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .categoria p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+     .logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+  <div class="logo-titulo">
+    <img src="assets/img/logo.jpg" alt="Logo MakeUp Wow!" class="logo">
+    <div>
+      <h1>MakeUp Wow!</h1>
+      <p>Descubre la mejor versión de ti</p>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar productos...">
+    <button>Buscar</button>
+  </div>
+
+    <ul class="menu">
+      <li><a href="http://127.0.0.1:5500/index.html">Inicio</a></li>
+      <li><a href="http://127.0.0.1:5500/mi%20cuenta.html">Mi cuenta</a></li>
+      <li><a href="http://127.0.0.1:5500/catalogo.html">Catálogo</a></li>
+      <li><a href="#ofertas">nosotros</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenido principal con imágenes clicables -->
+  <div class="container">
+    <h2>Elige una categoría</h2>
+
+    <div class="categorias">
+
+      <a href="maquillaje.html" class="categoria">
+        <img src="https://i.pinimg.com/originals/6c/df/7e/6cdf7e257e2312f404c46f656f704a3b.jpg" alt="Maquillaje">
+        <p>Maquillaje</p>
+      </a>
+
+      <a href="cuidado.html" class="categoria">
+        <img src="https://i.pinimg.com/736x/36/ab/50/36ab500ebc9094e53804d571bae3c85e.jpg" alt="Cuidado de la Piel">
+        <p>Cuidado de la Piel</p>
+      </a>
+
+      <a href="brochas.html" class="categoria">
+        <img src="https://i.pinimg.com/736x/3f/98/1e/3f981ec526b5ba1d66a18e369204a726.jpg" alt="Brochas y Esponjas">
+        <p>Brochas y Esponjas</p>
+      </a>
+        <a href="accesorios.html" class="categoria">
+        <img src="https://i.pinimg.com/1200x/4c/22/3d/4c223dabefa809465bf9309b69b113dd.jpg" alt="accesorios">
+        <p>accesorios</p>
+      </a>
+
+
+
+
+    </div>
+  </div>
+
+</body>
+<!-- Sección de redes sociales o productos destacados -->
+<div style="background-color: #fff0f6; padding: 40px 20px; text-align: center;">
+  <h2 style="color: #000; margin-bottom: 30px;">@MakeUpstore<br>EXPLORA NUESTRAS REDES SOCIALES</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Imagen 1 -->
+    <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/d49e7ef0-d82c-4b88-888c-09c060ebc47e___2727a2cf7a2442c6f81ff17d77d793ea.jpg" alt="Imagen 1" style="width: 250px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    
+    <!-- Imagen 2 -->
+    <img src="https://i.pinimg.com/1200x/e8/d3/07/e8d30722974324b7bb39077efa24d3bb.jpg" alt="Imagen 2" style="width: 250px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    
+    <!-- Imagen 3 -->
+    <img src="https://i.pinimg.com/736x/78/eb/0b/78eb0b95915507c85a854d44b3b7d3f4.jpg" alt="Imagen 3" style="width: 250px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    
+    <!-- Imagen 4 -->
+    <img src="https://i.pinimg.com/736x/82/76/a2/8276a29cd0b5f73d8afac010af75af60.jpg" alt="Imagen 4" style="width: 250px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+
+  </div>
+
+  <a href="#" style="display: inline-block; margin-top: 30px; padding: 10px 25px; background-color: #ff69b4; color: white; border-radius: 25px; text-decoration: none; font-weight: bold;">Síguenos</a>
+</div>
+
+  <!-- Pie de página -->
+  <footer style="background-color: #ff69b4; color: #000; padding: 40px 20px; text-align: center; margin-top: 60px;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+
+      <h3 style="margin-bottom: 10px;">MakeUp Wow!</h3>
+      <p style="margin: 5px 0;">Realza tu belleza natural con los mejores productos del mercado.</p>
+      <p style="margin: 5px 0;">Tu tienda de confianza en maquillaje, cuidado de la piel y más.</p>
+
+      <div style="margin-top: 20px;">
+        <a href="#" style="margin: 0 10px; color: #000; text-decoration: none; font-weight: bold;">Términos y condiciones</a>
+        <a href="#" style="margin: 0 10px; color: #000; text-decoration: none; font-weight: bold;">Política de privacidad</a>
+        <a href="#" style="margin: 0 10px; color: #000; text-decoration: none; font-weight: bold;">Contacto</a>
+      </div>
+        <div style="margin-top: 10px;">
+        <a href="#" style="margin: 5px; color: #000; text-decoration: none; font-weight: bold;">322 7947516</a>
+      </div>
+      <div style="margin-top: 20px; font-size: 0.9em;">
+        © 2025 MakeUp Wow! - Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</html>
